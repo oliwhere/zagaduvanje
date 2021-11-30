@@ -8,7 +8,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 # NAPOMENA
 
-Sekogash napravete **fetch** pred da pochnete so rabota na proektot.
+Sekogash napravete **fetch** i **pull** pred da pochnete so rabota na proektot.
 
 ## Development server
 
