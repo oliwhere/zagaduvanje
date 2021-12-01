@@ -1,14 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {ValidationService} from "../shared/errors/validation.service";
+import {ToastrService} from "ngx-toastr";
 @Component({
   selector: 'app-home',
   templateUrl: './donate.component.html',
   styleUrls: ['./donate.component.css'],
 })
 export class DonateComponent implements OnInit {
-  donateValidationForm!: FormGroup;
+  donateValidationForm: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder,
+              private toastr: ToastrService) { }
 
 
   ngOnInit(): void {
@@ -21,8 +24,8 @@ export class DonateComponent implements OnInit {
     this.donateValidationForm = this.formBuilder.group({
       name: ['', [Validators.required]],
       surname: ['', [Validators.required]],
-      email: ['', [Validators.required, Validators.email]],
-      amount: ['', [Validators.required]]
+      email: ['', [Validators.required, ValidationService.emailValidator]],
+      amount: [100, [Validators.required, ValidationService.positiveNumberValidator, Validators.min(100)]]
     });
   }
 
@@ -30,7 +33,11 @@ export class DonateComponent implements OnInit {
     if (this.donateValidationForm.invalid) {
       return;
     }
+
+    this.toastr.success('Successful Donation: ' + this.donateValidationForm.get('amount')?.value + 'DEN');
   }
 
-  public cancel(): void {}
+  public resetForm(): void {
+    this.donateValidationForm.reset();
+  }
 }

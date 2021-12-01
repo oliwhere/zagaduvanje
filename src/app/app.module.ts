@@ -8,6 +8,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {ControlMessagesComponent} from "./shared/errors/control-messages.component";
+import {ToastrModule} from "ngx-toastr";
 
 @NgModule({
   declarations: [AppComponent],
@@ -19,7 +21,8 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     BrowserAnimationsModule,
     MatToolbarModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    ToastrModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent],
