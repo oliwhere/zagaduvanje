@@ -1,8 +1,9 @@
 <mat-toolbar color="primary">
   <span class="example-spacer">Zagaduvanje</span>
-  <a mat-button color="accent" [routerLink]="'/home'">Home</a>
-  <a mat-button color="accent" [routerLink]="'/about'">About</a>
-  <a mat-button color="accent" [routerLink]="'/contact'">Contanct</a>
-  <a mat-button color="accent" [routerLink]="'/donate'">Donate</a>
-  <a mat-button color="accent" [routerLink]="'/volunteer'">Volunteer</a>
+  <a mat-button color="accent" routerLink="/home" routerLinkActive="active">Home</a>
+  <a mat-button color="accent" routerLink="/about" routerLinkActive="active">About</a>
+  <a mat-button color="accent" routerLink="/contact" routerLinkActive="active">Contanct</a>
+  <a mat-button color="accent" routerLink="/donate" routerLinkActive="active">Donate</a>
+  <a mat-button color="accent" routerLink="/Volunteer" routerLinkActive="active">Volunteer</a>
 </mat-toolbar>
+<router-outlet></router-outlet>
