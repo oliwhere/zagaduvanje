@@ -1,3 +1,4 @@
+import { environment } from './../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { catchError, map, Observable, of } from 'rxjs';
@@ -13,7 +14,7 @@ export class HomeComponent implements OnInit {
   constructor(httpClient: HttpClient) {
     this.apiLoaded = httpClient
       .jsonp(
-        'https://maps.googleapis.com/maps/api/js?key=AIzaSyAvcDy5ZYc2ujCS6TTtI3RYX5QmuoV8Ffw',
+        environment.apiUrl,
         'callback'
       )
       .pipe(
