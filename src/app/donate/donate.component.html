@@ -1,1 +1,69 @@
-<p>donate works!</p>
+<form class="form-horizontal col-xl-6 mx-auto"
+      autocomplete="off"
+      [formGroup]="donateValidationForm"
+      (ngSubmit)="onSubmit()">
+  <div class="form-group mb-0">
+    <label class="col-form-label form-group-title font-color font-size-15">
+      Name
+    </label>
+    <input formControlName="name"
+           type="text"
+           style="text-transform:lowercase"
+           placeholder="Enter name"
+           class="form-control mb-2">
+  </div>
+  <div class="form-group mb-0">
+    <label class="col-form-label form-group-title font-color font-size-15">
+      Surname
+    </label>
+    <input formControlName="surname"
+           type="text"
+           style="text-transform:lowercase"
+           placeholder="Enter surname"
+           class="form-control mb-2">
+   <!-- <app-control-messages
+      [control]="donateValidationForm?.get('surname')">
+    </app-control-messages>-->
+  </div>
+  <div class="form-group mb-0">
+    <label class="col-form-label form-group-title font-color font-size-15">
+      Amount
+    </label>
+    <input formControlName="amount"
+           type="number"
+           style="text-transform:lowercase"
+           placeholder="Enter amount"
+           class="form-control mb-2">
+   <!-- <app-control-messages
+      [control]="donateValidationForm?.get('amount')">
+    </app-control-messages>-->
+  </div>
+  <div class="form-group mb-0">
+    <label class="col-form-label form-group-title font-color font-size-15">
+      Email
+    </label>
+    <input formControlName="email"
+           type="email"
+           style="text-transform:lowercase"
+           placeholder="Enter email"
+           class="form-control mb-2">
+   <!-- <app-control-messages
+      [control]="donateValidationForm?.get('email')">
+    </app-control-messages>-->
+  </div>
+
+
+  <div class="mt-4">
+    <button class="btn btn-block log-in-btn"
+            type="submit">Donate
+    </button>
+    <button
+      class="btn btn-block log-in-btn"
+      (click)="cancel()"
+      type="button">
+      Cancel
+    </button>
+  </div>
+
+</form>
+
