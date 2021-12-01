@@ -15,21 +15,19 @@ const routes: Routes = [
      path: 'about',
      loadChildren: () => import('./about/about.module').then((x) => x.AboutModule)
    },
-  // {
-  //   path: 'contact',
-  //   loadChildren: () =>
-  //     import('./contact/contact.module').then((x) => x.ContactModule),
-  // },
-  // {
-  //   path: 'volunteer',
-  //   loadChildren: () =>
-  //     import('./volunteer/volunteer.module').then((x) => x.VolunteerModule),
-  // },
-  // {
-  //   path: 'donate',
-  //   loadChildren: () =>
-  //     import('./donate/donate.module').then((x) => x.DonateModule),
-  // },
+   {
+     path: 'contact',
+     loadChildren: () => import('./contact/contact.module').then((x) => x.ContactModule)
+   },
+   {
+     path: 'volunteer',
+     loadChildren: () => import('./volunteer/volunteer.module').then((x) => x.VolunteerModule)
+   },
+   {
+     path: 'donate',
+     loadChildren: () =>
+     import('./donate/donate.module').then((x) => x.DonateModule)
+   },
   {
     path: '**',
     redirectTo: 'home',
