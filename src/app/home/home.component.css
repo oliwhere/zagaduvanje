@@ -25,3 +25,8 @@
   margin-bottom:  1rem;
 }
 
+.card-columns {
+  @media (min-width: 992px) {
+    column-count: 2
+  }
+}

@@ -1,3 +1,4 @@
+import { HomeService } from './home/home.service';
 import { HomeModule } from './home/home.module';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { NgModule } from '@angular/core';
@@ -24,7 +25,7 @@ import {VolunteerService} from "./volunteer/volunteer.service";
     MatButtonModule,
     ToastrModule.forRoot()
   ],
-  providers: [DonateService,VolunteerService],
+  providers: [DonateService,VolunteerService, HomeService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
