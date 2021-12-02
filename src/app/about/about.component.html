@@ -2,9 +2,9 @@
   <div class="row">
     <form class="form-inline waves-light col-xl-12" mdbWavesEffect>
       <div class="md-form mt-0">
-      <h1 class="about-us-heading">About us</h1>
-      <p class="about-us-paragraph ">Find out who we are and what we do</p>
-  <!--<p class="form-inline waves-light col-xl-12" mdbWavesEffect><b>
+        <h1 class="about-us-heading">About us</h1>
+        <p class="about-us-paragraph">Find out who we are and what we do</p>
+        <!--<p class="form-inline waves-light col-xl-12" mdbWavesEffect><b>
     We have listed 7 common air pollution causes along with the effects that have serious implication on your health on a daily basis.</b>
   </p>
   <ul>
@@ -16,39 +16,66 @@
     <li>Transportation. ...</li>
     <li>Open Burning of Garbage Waste. ...</li>
   </ul>-->
-        <input (keyup)="applyFilter($event.target.value)"
-               class="form-control mr-sm-2 mt-4"
-               style="width: 200px;"
-               type="text"
-               placeholder="Search Volunteer">
+        <input
+          (keyup)="applyFilter($event.target.value)"
+          class="form-control mr-sm-2 mt-4"
+          style="width: 200px"
+          type="text"
+          placeholder="Search Volunteer"
+        />
       </div>
     </form>
-    <div class="col-md-4 my-4" *ngFor="let member of filteredTeamMembers; let i = index">
+    <div
+      class="col-md-4 my-4"
+      *ngFor="let member of filteredTeamMembers; let i = index"
+    >
       <div class="card p-3 mb-2">
         <div class="d-flex justify-content-between">
           <div class="d-flex flex-row align-items-center">
             <div class="icon">
-              <img [src]="member?.img" class="card-img-top" alt="...">
+              <img [src]="member?.img" class="card-img-top" alt="..." />
             </div>
             <div class="ms-2 c-details">
-              <h6 class="mb-0">Volunteer</h6> <span>{{i * 3}} days ago</span>
+              <h6 class="mb-0">Volunteer</h6>
+              <span>{{ i * 3 }} days ago</span>
             </div>
           </div>
-          <div class="badge"> <span>{{member?.name}}</span> </div>
+          <div class="badge">
+            <span>{{ member?.name }}</span>
+          </div>
         </div>
         <div class="mt-3">
-          <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, <br>
-            when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
-          <span class="badge badge-primary px-0" style="color: black; cursor: pointer;">{{member?.linkedInUrl}}</span>
+          <p>
+            Lorem Ipsum has been the industry's standard dummy text ever since
+            the 1500s, <br />
+            when an unknown printer took a galley of type and scrambled it to
+            make a type specimen book
+          </p>
+          <span
+            class="badge badge-primary px-0"
+            style="color: black; cursor: pointer"
+            >{{ member?.linkedInUrl }}</span
+          >
           <div class="mt-3">
             <div class="progress">
-              <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+              <div
+                class="progress-bar"
+                role="progressbar"
+                style="width: 50%"
+                aria-valuenow="50"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              ></div>
             </div>
-            <div class="mt-3"> <span class="text1">{{member?.donations}} Donations <span class="text2">of 50 Fundraising Events</span></span> </div>
+            <div class="mt-3">
+              <span class="text1"
+                >{{ member?.donations }} Donations
+                <span class="text2">of 50 Fundraising Events</span></span
+              >
+            </div>
           </div>
         </div>
       </div>
     </div>
-
   </div>
 </div>
