@@ -14,7 +14,6 @@
           </label>
           <input formControlName="name"
                  type="text"
-                 style="text-transform:lowercase"
                  placeholder="Enter name"
                  class="form-control mb-2">
           <app-control-messages
@@ -27,7 +26,6 @@
           </label>
           <input formControlName="surname"
                  type="text"
-                 style="text-transform:lowercase"
                  placeholder="Enter surname"
                  class="form-control mb-2">
           <app-control-messages
@@ -40,7 +38,6 @@
           </label>
           <input formControlName="amount"
                  type="number"
-                 style="text-transform:lowercase"
                  placeholder="Enter amount"
                  class="form-control mb-2">
           <app-control-messages
@@ -68,7 +65,7 @@
                   type="submit" id="submit">Donate
           </button>
           <button
-            class="btn btn-light "
+            class="btn reset-btn"
             (click)="resetForm()"
             type="button">
             Reset
@@ -112,6 +109,41 @@
         </tr>
         </tbody>
       </table>
+    </div>
+  </div>
+</div>
+<h2>Donations by Years</h2>
+<div class="col-xl-12 d-flex justify-content-around">
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title"><img  src="../../assets/images/icon-annual-revenue.svg" alt="annual premium"></h5>
+      <h4 class="card-subtitle mb-2 font-weight-bold">Vrednost: <b>111.500 DEN</b></h4>
+      <p class="card-text">Godina: <b>2021</b></p>
+      <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title"><img  src="../../assets/images/icon-annual-revenue.svg" alt="annual premium"></h5>
+      <h4 class="card-subtitle mb-2 font-weight-bold">Vrednost: <b>2.251.500 DEN</b></h4>
+      <p class="card-text">Godina: <b>2020</b></p>
+      <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title"><img  src="../../assets/images/icon-annual-revenue.svg" alt="annual premium"></h5>
+      <h4 class="card-subtitle mb-2 font-weight-bold">Vrednost: <b>1.000.000 DEN</b></h4>
+      <p class="card-text">Godina: <b>2019</b></p>
+      <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title"><img  src="../../assets/images/icon-annual-revenue.svg" alt="annual premium"></h5>
+      <h4 class="card-subtitle mb-2 font-weight-bold">Vrednost: <b>2.456.777 DEN</b></h4>
+      <p class="card-text">Godina: <b>2018</b></p>
+      <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
     </div>
   </div>
 </div>

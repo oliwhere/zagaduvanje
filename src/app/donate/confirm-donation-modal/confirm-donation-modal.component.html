@@ -1,15 +1,36 @@
-
 <div class="modal-header">
-  <h5 class="modal-title">Confirm Donation</h5>
-
-  <button type="button" class="close" aria-hidden="true" (click)="closeModal()">×</button>
+  <p class="modal-title mt-0 font-weight-bold">
+    Confirm Donation
+  </p>
+  <button type="button"
+          class="close-modal"
+          aria-hidden="true"
+          (click)="closeModal()"></button>
 </div>
 <div class="modal-body">
-  <p>You are about to donate: <b>{{donation?.amount}}</b> denari</p>
-  <p>Thank you <b>{{donateService.uppercaseFirstLetter(donation?.name)}} {{donateService.uppercaseFirstLetter(donation?.surname)}}</b></p>
-</div>
-<div class="modal-footer">
-  <button type="button" class="btn btn-primary" (click)="confirm(); closeModal();">Confirm</button>
-  <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="closeModal();">Close</button>
+  <div class="card no-borders">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-xl-12 px-0">
+          <div class="form-group">
+            <p>You are about to donate: <b>{{donation?.amount}}</b> denari</p>
+            <p>Thank you <b>{{donateService.uppercaseFirstLetter(donation?.name)}} {{donateService.uppercaseFirstLetter(donation?.surname)}}</b></p>
+          </div>
+        </div>
+        <div class="mt-5 button-area float-right">
+          <button class="btn btn-primary float-right"
+                  (click)="confirm(); closeModal();"
+                  type="button">
+            Confirm
+          </button>
+          <button class="btn btn-light float-right"
+                  (click)="closeModal()"
+                  type="button">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 

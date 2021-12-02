@@ -26,3 +26,28 @@ h2{
   padding-top: 2px;
   padding-bottom: 2px;
 }
+
+.card {
+  filter: drop-shadow(0 8px 12px rgba(191,191,191,.2));
+  border-radius: 1rem;
+  background-color: #fff;
+}
+
+input {
+  border: 1px solid #eee;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #28384f;
+  transition: all .3s ease-in-out;
+  text-transform: lowercase;
+}
+
+label {
+  color: #192332;
+  font-size: .8125rem;
+  font-weight: 400;
+}
+
+.reset-btn {
+  background-color: #eee;
+}

@@ -1,0 +1,25 @@
+.modal-header {
+  border-bottom: 1px solid #F0F0F1;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .close-modal {
+    background: #F0F0F1 url("../../../assets/images/close-icon-blue.svg") no-repeat center center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 0;
+  }
+}
+
+.button-area {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+
+}
+
+.no-borders {
+  border: transparent;
+}
