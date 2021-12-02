@@ -4,15 +4,18 @@ import { DonateComponent } from './donate.component';
 import {DonateRoutingModule} from "./donate-routing.module";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {SharedModule} from "../shared/shared.module";
+import {NgbModalModule, NgbTooltipModule} from '@ng-bootstrap/ng-bootstrap';
+import {ConfirmDonationModalComponent} from "./confirm-donation-modal/confirm-donation-modal.component";
 
 @NgModule({
-  declarations: [DonateComponent],
+  declarations: [DonateComponent, ConfirmDonationModalComponent],
   imports: [
     FormsModule,
     CommonModule,
     ReactiveFormsModule,
     SharedModule,
-    DonateRoutingModule
+    DonateRoutingModule,
+    NgbModalModule
   ]
 })
 export class DonateModule {}
