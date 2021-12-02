@@ -1,33 +1,77 @@
-<div *ngIf="apiLoaded" class="container">
-  <google-map [options]="options" (mapClick)="click($event)"></google-map>
-  <h1 id="ime">Volunteers working on the problems:</h1>
-  <div class="row">
-    <div *ngFor="let volunteer of volunteers; let i = index">
-      <div class="card-body col">
-        <!-- <h3 class="card-title"><strong>{{ volunteer?.name }} {{ volunteer?.surname }}</strong></h3> -->
-        <div class="card p-3 mb-2">
-          <!-- <div class="d-flex justify-content-between">
-          <div class="d-flex flex-row align-items-center">
-            <div class="ms-2 c-details"> -->
-          <h6 class="mb-0">Volunteer</h6>
-          <!-- <span>{{ i * 3 }} days ago</span> -->
-          <!-- </div>
-          </div>
-        </div> -->
-          <div class="mt-5">
-            <h3 class="heading">
-              {{ homeService.uppercaseFirstLetter(volunteer.name) }}
-              {{ homeService.uppercaseFirstLetter(volunteer.surname) }}
-            </h3>
-            <ul>
-              <li>Oblast: Aerodrom</li>
-              <li>Raboti: Open Burning of Garbage Waste</li>
-              <li>Status: Aktiven</li>
-            </ul>
-            <br />
+<div *ngIf="apiLoaded" class="container mt-5">
+  <google-map [options]="options"> </google-map>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title"><strong>UPCOMMING EVENTS</strong></h4>
+            <div>
+              <ul>
+                <li>
+                  <div class="icon">
+                    <img src="../../assets/images/first-annual-day-calendar-page-interface-symbol.png" alt="date">
+                    09:00 - 12:00
+                  </div>
+                  <p>
+                    Chistenje na lisja
+                  </p>
+                </li>
+                <li >
+                  <div class="icon">
+                    <img src="../../assets/images/april-14-calendar-page-day.png" alt="date">
+                    08:00 - 13:00
+                  </div>
+                  <p>
+                    Sobiranje otpad od rekata Vardar
+                  </p>
+                </li>
+                <li>
+                  <div class="icon">
+                    <img src="../../assets/images/april-14-calendar-page-day.png" alt="date">
+                    07:30 - 14:30
+                  </div>
+                  <p>
+                    Poshumuvanje na Vodno
+                  </p>
+                </li>
+                <li>
+                  <div class="icon">
+                    <img src="../../assets/images/daily-calendar-page-on-january-11.png" alt="date">
+                    09:00 - 17:00
+                  </div>
+                  <p>
+                    Masoven pottik i sobir za denot na drvoto.
+                  </p>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
+
+<h1>Volunteers working on the problems:</h1>
+<div>
+  <div class="col-xl-12 d-flex justify-content-around">
+    <div class="card" style="width: 18rem" *ngFor="let volunteer of volunteers">
+      <div class="card-body">
+        <h5 class="card-title">
+          <img src="../../assets/images/volunteer-logo.png" alt="volunteer" />
+        </h5>
+        <h4 class="card-subtitle mb-2 font-weight-bold">
+          Name: <strong>{{ volunteer.name }} {{ volunteer.surname }}</strong>
+        </h4>
+        <ul>
+          <li>Oblast: Aerodrom</li>
+          <li>Raboti: Open Burning of Garbage Waste</li>
+          <li>Status: Aktiven</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="w-100"></div>
 </div>

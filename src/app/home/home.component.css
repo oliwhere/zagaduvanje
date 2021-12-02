@@ -23,10 +23,22 @@
 
 .card {
   margin-bottom:  1rem;
+  width: 20rem;
+}
+h1 {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 30px;
+  font-weight: bolder;
+  color: #7b1fa2;
 }
 
-.card-columns {
-  @media (min-width: 992px) {
-    column-count: 2
-  }
+.card-title > img {
+  width: 15%;
+  height: 15%;
+}
+
+.icon > img {
+  width: 15%;
+  height: 15%;
 }

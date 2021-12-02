@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { catchError, map, Observable, of } from 'rxjs';
 import { HomeService } from './home.service';
+import { AnyCatcher } from 'rxjs/internal/AnyCatcher';
 
 @Component({
   selector: 'app-home',
@@ -12,14 +13,12 @@ import { HomeService } from './home.service';
 export class HomeComponent implements OnInit {
   volunteers: object[] = [];
   apiLoaded: Observable<boolean>;
+  center: google.maps.LatLngLiteral;
   options: google.maps.MapOptions = {
-    center: { lat: 41.9991487, lng: 21.3898709 },
     zoom: 15,
+    disableDefaultUI: true,
   };
-
-  click(event: google.maps.MapMouseEvent) {
-    console.log(event);
-  }
+  markers: any = [];
 
   constructor(httpClient: HttpClient, public homeService: HomeService) {
     this.apiLoaded = httpClient.jsonp(environment.apiUrl, 'callback').pipe(
