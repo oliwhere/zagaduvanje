@@ -21,7 +21,9 @@
 .icon {
   width: 50px;
   height: 50px;
+  /*
   background-color: #eee;
+  */
   border-radius: 15px;
   display: flex;
   align-items: center;
@@ -57,4 +59,20 @@
 
 .text2 {
   color: #a5aec0
+}
+
+.about-us-heading {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 50px;
+  font-weight: bolder;
+  color: #7b1fa2;
+}
+
+.about-us-paragraph {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 30px;
+  font-weight: bolder;
+  color: #7b1fa2;
 }

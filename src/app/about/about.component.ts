@@ -21,7 +21,7 @@ export class AboutComponent implements OnInit {
         info: 'Premium member',
         donations: 12,
         label:'Create & designin About page',
-        
+
         linkedInUrl: 'https://www.linkedin.com/in/nikola-ivanchov-243479161/'
       },
       {
@@ -46,9 +46,21 @@ export class AboutComponent implements OnInit {
         info: 'Basic member',
         donations: 1,
         linkedInUrl: 'http://linkiedin/simona'
-      },
-      
-      
+      },{
+        name: 'Jovana',
+        img: '../assets/images/sliki/sims.jpg',
+        info: 'Basic member',
+        donations: 1,
+        linkedInUrl: 'http://linkiedin/jovana'
+      },{
+        name: 'Ivan',
+        img: '../assets/images/sliki/sims.jpg',
+        info: 'Basic member',
+        donations: 1,
+        linkedInUrl: 'http://linkiedin/ivan'
+      }
+
+
     ]
     this.filteredTeamMembers = this.teamMembers;
   }
