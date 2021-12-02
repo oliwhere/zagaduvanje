@@ -9,19 +9,21 @@ import { catchError, map, Observable, of } from 'rxjs';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
+  volunteers: object[] = [];
   apiLoaded: Observable<boolean>;
 
   constructor(httpClient: HttpClient) {
-    this.apiLoaded = httpClient
-      .jsonp(
-        environment.apiUrl,
-        'callback'
-      )
-      .pipe(
-        map(() => true),
-        catchError(() => of(false))
-      );
+    this.apiLoaded = httpClient.jsonp(environment.apiUrl, 'callback').pipe(
+      map(() => true),
+      catchError(() => of(false))
+    );
   }
 
-  ngOnInit(): void {}
+  get test() {
+    return JSON.parse(<string>localStorage.getItem('donations'));
+  }
+
+  ngOnInit(): void {
+    this.volunteers = this.test;
+  }
 }

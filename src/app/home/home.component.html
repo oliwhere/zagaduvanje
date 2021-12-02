@@ -1,4 +1,13 @@
-<p>home works!</p>
-<div *ngIf="apiLoaded">
+<div *ngIf="apiLoaded" class="container">
   <google-map></google-map>
+  <h1 id="ime">Volunteers working on the problems:</h1>
+  <div
+    *ngFor="let volunteer of volunteers"
+    class="card"
+    style="width: 15rem; height: 6rem"
+  >
+    <div class="card-body">
+      <h3 class="card-title"><strong>{{ volunteer?.name }} {{ volunteer?.surname }}</strong></h3>
+    </div>
+  </div>
 </div>

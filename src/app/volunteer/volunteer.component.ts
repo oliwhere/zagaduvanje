@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {ValidationService} from "../shared/errors/validation.service";
-import {ToastrService} from "ngx-toastr";
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ValidationService } from '../shared/errors/validation.service';
+import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-home',
   templateUrl: './volunteer.component.html',
@@ -10,23 +10,34 @@ import {ToastrService} from "ngx-toastr";
 export class VolunteerComponent implements OnInit {
   volunteerValidationForm: FormGroup;
 
-  constructor(private formBuilder: FormBuilder,
-              private toastr: ToastrService) { }
-
+  constructor(
+    private formBuilder: FormBuilder,
+    private toastr: ToastrService
+  ) {}
 
   ngOnInit(): void {
     this.setValidationForm();
   }
 
-  get f() { return this.volunteerValidationForm.controls; }
+  get f() {
+    return this.volunteerValidationForm.controls;
+  }
 
   private setValidationForm(): void {
     this.volunteerValidationForm = this.formBuilder.group({
       name: ['', [Validators.required]],
       surname: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
-      phone: ['', [Validators.required, Validators.maxLength(9),ValidationService.positiveNumberValidator, Validators.min(0o70000000)]],
-      adress:['', [Validators.required]],
+      phone: [
+        '',
+        [
+          Validators.required,
+          Validators.maxLength(9),
+          ValidationService.positiveNumberValidator,
+          Validators.min(0o70000000),
+        ],
+      ],
+      adress: ['', [Validators.required]],
     });
   }
 
