@@ -1,3 +1,19 @@
+<div class="image-background">
+  <div class="container h-100">
+    <div class="row h-100 align-items-center">
+      <div class="col-4 text-left">
+        <h2 class="">СПРЕЧИ ГО ЗАГАДУВАЊЕТО</h2>
+        <h2 class="">Превземи акција!</h2>
+        <h3 class="">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime
+          tempora pariatur repudiandae reiciendis iure odit quam veniam
+          cupiditate a quod nam obcaecati cumque, dolores tenetur libero velit
+          nulla saepe nemo.
+        </h3>
+      </div>
+    </div>
+  </div>
+</div>
 
 <div #map style="width: 100%; height: 450px"></div>
 
@@ -7,7 +23,7 @@
       <div class="col-3 md-12">
         <div class="card">
           <div class="card-body">
-            <h4 class="card-title"><strong>UPCOMMING EVENTS</strong></h4>
+            <h4 class="card-title"><strong>СЛЕДНИ НАСТАНИ</strong></h4>
             <div>
               <ul>
                 <li>
@@ -18,7 +34,7 @@
                     />
                     09:00 - 12:00
                   </div>
-                  <p>Chistenje na lisja</p>
+                  <p>Чистење на лисја</p>
                 </li>
                 <li>
                   <div class="icon">
@@ -28,7 +44,7 @@
                     />
                     08:00 - 13:00
                   </div>
-                  <p>Sobiranje otpad od rekata Vardar</p>
+                  <p>Собирање отпад од реката Вардар</p>
                 </li>
                 <li>
                   <div class="icon">
@@ -38,7 +54,7 @@
                     />
                     07:30 - 14:30
                   </div>
-                  <p>Poshumuvanje na Vodno</p>
+                  <p>Пошумување на Водно</p>
                 </li>
                 <li>
                   <div class="icon">
@@ -48,7 +64,7 @@
                     />
                     09:00 - 17:00
                   </div>
-                  <p>Masoven pottik i sobir za denot na drvoto.</p>
+                  <p>Масовен поттик за учествување на денот на дрвото</p>
                 </li>
               </ul>
             </div>
@@ -58,28 +74,27 @@
     </div>
   </div>
   <div class="col-xl-9">
-    <h1 class="col-xl-12">Volunteers working on the problems:</h1>
+    <h1 class="col-xl-12">Активни волонтери:</h1>
     <div class="col-xl-12 d-flex justify-content-around">
-        <div
-          class="card m-4"
-          style="width: 18rem"
-          *ngFor="let volunteer of volunteers"
-        >
-          <div class="card-body">
-            <h5 class="card-title">
-              <img src="../../assets/images/volunteer-logo.png" alt="volunteer" />
-            </h5>
-            <h4 class="card-subtitle mb-2 font-weight-bold">
-              Name: <strong>{{ volunteer.name }} {{ volunteer.surname }}</strong>
-            </h4>
-            <ul>
-              <li>Oblast: Aerodrom</li>
-              <li>Raboti: Open Burning of Garbage Waste</li>
-              <li>Status: Aktiven</li>
-            </ul>
-          </div>
+      <div
+        class="card m-4"
+        style="width: 18rem"
+        *ngFor="let volunteer of volunteers"
+      >
+        <div class="card-body">
+          <h5 class="card-title">
+            <img src="../../assets/images/volunteer-logo.png" alt="volunteer" />
+          </h5>
+          <h4 class="card-subtitle mb-2 font-weight-bold">
+            Име: <strong>{{ volunteer.name }} {{ volunteer.surname }}</strong>
+          </h4>
+          <ul>
+            <li>Област: Aerodrom</li>
+            <li>Работи: Дислоцирање на изгорена пластика</li>
+            <li>Статус: Активен</li>
+          </ul>
         </div>
       </div>
+    </div>
   </div>
-
 </div>

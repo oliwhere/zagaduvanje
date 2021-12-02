@@ -42,3 +42,36 @@ h1 {
   width: 15%;
   height: 15%;
 }
+
+.image-background {
+  height: 50vh;
+  min-height: 500px;
+  background-image: url("../../assets/images/3-car.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.image-background h2 {
+  color: #7b1fa2;
+  text-shadow: -1px 0 black,
+  0 1px black,
+  1px 0 black,
+  0 -1px black;
+}
+
+.image-background h1 {
+  color: #69f0ae;
+  text-shadow: -1px 0 black,
+  0 1px black,
+  1px 0 black,
+  0 -1px black;
+}
+
+.image-background h3 {
+  color: #69f0ae;
+  text-shadow: -1px 0 black,
+    0 1px black,
+    1px 0 black,
+    0 -1px black;
+}
