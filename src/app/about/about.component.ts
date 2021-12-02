@@ -20,7 +20,7 @@ export class AboutComponent implements OnInit {
         img: '../assets/images/nikola.jpg',
         info: 'Premium member',
         donations: 12,
-        linkedInUrl: 'http://linkiedin/nikola'
+        linkedInUrl: 'https://www.linkedin.com/in/nikola-ivanchov-243479161/'
       },
       {
         name: 'Denica',
@@ -34,7 +34,7 @@ export class AboutComponent implements OnInit {
         img: '../assets/images/oliver.jpeg',
         info: 'Basic member',
         donations: 10,
-        linkedInUrl: 'http://linkiedin/oliver'
+        linkedInUrl: 'https://www.linkedin.com/in/oliver-andonovic-5363a0213/'
       },
       {
         name: 'Simona',
@@ -43,20 +43,8 @@ export class AboutComponent implements OnInit {
         donations: 1,
         linkedInUrl: 'http://linkiedin/simona'
       },
-      {
-        name: 'Petar',
-        img: '../assets/images/petar.jpeg',
-        info: 'Basic member',
-        donations: 11,
-        linkedInUrl: 'http://linkiedin/petar'
-      },
-      {
-        name: 'Nikola',
-        img: '../assets/images/elena.jpeg',
-        info: 'Premium member',
-        donations: 6,
-        linkedInUrl: 'http://linkiedin/nikola'
-      }
+      
+      
     ]
     this.filteredTeamMembers = this.teamMembers;
   }
