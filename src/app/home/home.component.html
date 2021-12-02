@@ -1,5 +1,8 @@
+<div #map style="width:100%;height:450px"></div>
 <div *ngIf="apiLoaded" class="container">
-  <google-map [options]="options" (mapClick)="click($event)"></google-map>
+  <!--<google-map [options]="options" (mapClick)="click($event)"></google-map>-->
+
+
   <h1 id="ime">Volunteers working on the problems:</h1>
   <div class="row">
     <div *ngFor="let volunteer of volunteers; let i = index">
