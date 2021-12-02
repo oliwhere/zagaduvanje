@@ -63,6 +63,7 @@ export class DonateComponent implements OnInit {
 
   public removeDonation(i: number): void {
     const filteredDonations = this.activeDonations.filter( (donation: any, index: number) => index !== i);
+    this.donations = this.donations.filter( (donation: any, index: number) => index !== i);
     localStorage.removeItem('donations');
     localStorage.setItem('donations', JSON.stringify(filteredDonations));
 
