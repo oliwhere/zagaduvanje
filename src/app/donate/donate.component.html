@@ -101,14 +101,14 @@
           <td>{{donateService.uppercaseFirstLetter(donation.surname)}}</td>
           <td>{{donation.email}}</td>
           <td>{{donation.amount}} denari</td>
-          <td (click)="removeDonation(i)">
+          <td (click)="openRemoveDonationDialog(i)">
             <button class="btn btn-primary remove-donation-btn">
               Remove
             </button>
           </td>
         </tr>
         <tr>
-          <th scope="row">Total donated amount: {{getTotalDonatedAmount()}}</th>
+          <th scope="row">Total donated amount: {{getTotalDonatedAmount()}} denari</th>
         </tr>
         </tbody>
       </table>

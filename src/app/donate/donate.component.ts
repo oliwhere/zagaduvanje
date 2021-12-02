@@ -5,6 +5,7 @@ import {ToastrService} from "ngx-toastr";
 import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
 import {ConfirmDonationModalComponent} from "./confirm-donation-modal/confirm-donation-modal.component";
 import {DonateService} from "./donate.service";
+import {RemoveDonationModalComponent} from "./remove-donation-modal/remove-donation-modal.component";
 @Component({
   selector: 'app-home',
   templateUrl: './donate.component.html',
@@ -50,6 +51,14 @@ export class DonateComponent implements OnInit {
     });
   }
 
+  public openRemoveDonationDialog(i: number): void {
+    const modalRef =  this.modalService.open(RemoveDonationModalComponent, {windowClass: 'modal-holder'});
+
+    modalRef.componentInstance.emitConfirm.subscribe((value: any) => {
+      this.removeDonation(i);
+    });
+  }
+
   public onSubmit(): void {
     if (this.donateValidationForm.invalid) {
       return;
@@ -66,7 +75,7 @@ export class DonateComponent implements OnInit {
     this.donations = this.donations.filter( (donation: any, index: number) => index !== i);
     localStorage.removeItem('donations');
     localStorage.setItem('donations', JSON.stringify(filteredDonations));
-
+    this.toastr.success('Donation Removed');
   }
 
   public getTotalDonatedAmount(): number {
