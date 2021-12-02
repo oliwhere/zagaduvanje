@@ -10,6 +10,7 @@ import { MatButtonModule } from '@angular/material/button';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {ToastrModule} from "ngx-toastr";
 import {DonateService} from "./donate/donate.service";
+import {VolunteerService} from "./volunteer/volunteer.service";
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -23,7 +24,7 @@ import {DonateService} from "./donate/donate.service";
     MatButtonModule,
     ToastrModule.forRoot()
   ],
-  providers: [DonateService],
+  providers: [DonateService,VolunteerService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
