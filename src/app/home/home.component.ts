@@ -19,11 +19,11 @@ export class HomeComponent implements OnInit {
     );
   }
 
-  get test() {
+  get volonteri() {
     return JSON.parse(<string>localStorage.getItem('donations'));
   }
 
   ngOnInit(): void {
-    this.volunteers = this.test;
+    this.volunteers = this.volonteri;
   }
 }
