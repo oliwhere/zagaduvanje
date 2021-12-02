@@ -40,11 +40,11 @@ export class VolunteerComponent implements OnInit {
         [
           Validators.required,
           Validators.maxLength(9),
-          ValidationService.positiveNumberValidator,
+          // ValidationService.positiveNumberValidator,
         ],
       ],
       adress: ['', [Validators.required]],
-      location:['',[Validators.required]]
+      location:['',]
     });
   }
   public get activeVolunteers(): any[] {
