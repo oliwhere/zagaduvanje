@@ -1,9 +1,12 @@
 <h1>Make A Change</h1>
 <h2>Be A Volunteer</h2>
+<div class="col-xl-12 d-flex justify-content-around">
+  <div class="card col-xl-5">
+    <div class="card-body">
 <form class="form-horizontal col-xl-6 mx-auto"
       autocomplete="off"
       [formGroup]="volunteerValidationForm"
-      (ngSubmit)="onSubmit()">
+      (ngSubmit)="openVolunteerConfirmationDialog()">
   <div class="form-group mb-0">
     <label class="col-form-label form-group-title font-color font-size-15">
       Name
@@ -66,7 +69,15 @@
       [control]="volunteerValidationForm?.get('phone')">
     </app-control-messages>
   </div>
-
+  <div class="form-group md-0">
+    <label for="inputState" class="col-form-label form-group-title font-color font-size-15">Location</label>
+    <select style="text-transform:lowercase" id="inputState" class="form-control mb-2">
+      <option class="form-control mb-2" selected>Choose...</option>
+      <option class="form-control mb-2" value="1">Aerodrom</option>
+      <option  class="form-control mb-2" value="2">Karposh 1</option>
+      <option class="form-control mb-2" value="3">Karposh 2</option>
+    </select>
+  </div>
   <div class="mt-4">
     <button class="btn btn-block log-in-btn"
             [disabled]="volunteerValidationForm.invalid"
@@ -79,6 +90,42 @@
       Cancel
     </button>
   </div>
-
 </form>
-
+  </div>
+</div>
+<div class="card col-xl-5">
+  <div class="card-body">
+    <table class="table">
+      <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Surname</th>
+        <th scope="col">Email</th>
+        <th scope="col">Adress</th>
+        <th scope="col">Phone Number</th>
+        <th></th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngIf="!activeVolunteers || activeVolunteers.length === 0">
+        <th scope="row"> No volunteers at the moment. </th>
+      </tr>
+      <tr *ngFor="let volunteer of activeVolunteers; let i = index;">
+        <th scope="row">{{i + 1}}</th>
+        <td>{{volunteerService.uppercaseFirstLetter(volunteer.name)}}</td>
+        <td>{{volunteerService.uppercaseFirstLetter(volunteer.surname)}}</td>
+        <td>{{volunteer.email}}</td>
+        <td>{{volunteer.adress}}</td>
+        <td>{{volunteer.phone}}</td>
+        <td (click)="openRemoveVolunteerDialog(i)">
+          <button class="btn btn-primary remove-donation-btn">
+            Remove
+          </button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>
