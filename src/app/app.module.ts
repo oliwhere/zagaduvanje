@@ -10,7 +10,7 @@ import { MatButtonModule } from '@angular/material/button';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {ControlMessagesComponent} from "./shared/errors/control-messages.component";
 import {ToastrModule} from "ngx-toastr";
-
+import { VolunteerComponent } from './volunteer/volunteer.component';
 @NgModule({
   declarations: [AppComponent],
   imports: [

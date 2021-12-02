@@ -1,1 +1,84 @@
-<p>volunteer works!</p>
+<h1>Make A Change</h1>
+<h2>Be A Volunteer</h2>
+<form class="form-horizontal col-xl-6 mx-auto"
+      autocomplete="off"
+      [formGroup]="volunteerValidationForm"
+      (ngSubmit)="onSubmit()">
+  <div class="form-group mb-0">
+    <label class="col-form-label form-group-title font-color font-size-15">
+      Name
+    </label>
+    <input formControlName="name"
+           type="text"
+           style="text-transform:lowercase"
+           placeholder="Enter name"
+           class="form-control mb-2">
+  </div>
+  <div class="form-group mb-0">
+    <label class="col-form-label form-group-title font-color font-size-15">
+      Surname
+    </label>
+    <input formControlName="surname"
+           type="text"
+           style="text-transform:lowercase"
+           placeholder="Enter surname"
+           class="form-control mb-2">
+     <app-control-messages
+       [control]="volunteerValidationForm?.get('surname')">
+     </app-control-messages>
+  </div>
+  <div class="form-group mb-0">
+    <label class="col-form-label form-group-title font-color font-size-15">
+      Adress
+    </label>
+    <input formControlName="adress"
+           type="string"
+           style="text-transform:lowercase"
+           placeholder="Enter adress"
+           class="form-control mb-2">
+    <app-control-messages
+       [control]="volunteerValidationForm?.get('adress')">
+     </app-control-messages>
+  </div>
+  <div class="form-group mb-0">
+    <label class="col-form-label form-group-title font-color font-size-15">
+      Email
+    </label>
+    <input formControlName="email"
+           type="email"
+           style="text-transform:lowercase"
+           placeholder="Enter email"
+           class="form-control mb-2">
+    <app-control-messages
+       [control]="volunteerValidationForm?.get('email')">
+     </app-control-messages>
+  </div>
+  <div class="form-group mb-0">
+    <label class="col-form-label form-group-title font-color font-size-15">
+      Phone Number
+    </label>
+    <input formControlName="phone"
+           type="string"
+           style="text-transform:lowercase"
+           placeholder="Enter phone number"
+           class="form-control mb-2">
+    <app-control-messages
+      [control]="volunteerValidationForm?.get('phone')">
+    </app-control-messages>
+  </div>
+
+  <div class="mt-4">
+    <button class="btn btn-block log-in-btn"
+            [disabled]="volunteerValidationForm.invalid"
+            type="submit" id="submit">Submit
+    </button>
+    <button
+      class="btn btn-block log-in-btn"
+      (click)="resetForm()"
+      type="button">
+      Cancel
+    </button>
+  </div>
+
+</form>
+
