@@ -17,28 +17,28 @@ export class AboutComponent implements OnInit {
     this.teamMembers = [
       {
         name: 'Nikola',
-        img: '../assets/images/nikola.jpg',
+        img: '../assets/images/sliki/nikola.jpg',
         info: 'Premium member',
         donations: 12,
         linkedInUrl: 'https://www.linkedin.com/in/nikola-ivanchov-243479161/'
       },
       {
         name: 'Denica',
-        img: '../assets/images/denica.jpeg',
+        img: '../assets/images/sliki/denica.jpg',
         info: 'Premium member',
         donations: 32,
         linkedInUrl: 'http://linkiedin/denica'
       },
       {
         name: 'Oliver',
-        img: '../assets/images/oliver.jpeg',
+        img: '../assets/images/sliki/oli.jpg',
         info: 'Basic member',
         donations: 10,
         linkedInUrl: 'https://www.linkedin.com/in/oliver-andonovic-5363a0213/'
       },
       {
         name: 'Simona',
-        img: '../assets/images/simona.jpeg',
+        img: '../assets/images/sliki/sims.jpg',
         info: 'Basic member',
         donations: 1,
         linkedInUrl: 'http://linkiedin/simona'
