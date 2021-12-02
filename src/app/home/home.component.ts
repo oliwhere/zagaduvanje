@@ -3,7 +3,6 @@ import { HttpClient } from '@angular/common/http';
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { catchError, map, Observable, of } from 'rxjs';
 import { HomeService } from './home.service';
-import { AnyCatcher } from 'rxjs/internal/AnyCatcher';
 
 @Component({
   selector: 'app-home',
@@ -33,24 +32,20 @@ export class HomeComponent implements OnInit, AfterViewInit {
       mapTypeId: google.maps.MapTypeId.ROADMAP,
       tooltipSettings: {
         visible: true,
-        valuePath:'city'
-      }
+        valuePath: 'city',
+      },
     };
+
     this.map = new google.maps.Map(
       this.mapElement.nativeElement,
-      mapProperties,
+      mapProperties
     );
     this.markers.forEach((location) => {
       var marker = new google.maps.Marker({
         position: new google.maps.LatLng(location.lat, location.lng),
         map: this.map,
-
       });
     });
-  }
-
-  click(event: google.maps.MapMouseEvent) {
-    console.log(event);
   }
 
   constructor(httpClient: HttpClient, public homeService: HomeService) {
