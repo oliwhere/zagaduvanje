@@ -2,7 +2,18 @@
   <div class="row">
     <form class="form-inline waves-light col-xl-12" mdbWavesEffect>
       <div class="md-form mt-0">
-        <p>Filter by name</p>
+
+  <p><b>We have listed 7 common air pollution causes along with the effects that have serious implication on your health on a daily basis.</b></p>
+  <ul>
+    <li>The Burning of Fossil Fuels. ...</li>
+    <li>Industrial Emission. ...</li>
+    <li>Indoor Air Pollution. ...</li>
+    <li>Wildfires. ...</li>
+    <li>Microbial Decaying Process. ...</li>
+    <li>Transportation. ...</li>
+    <li>Open Burning of Garbage Waste. ...</li>
+  </ul>
+        <p>Search</p>
         <input (keyup)="applyFilter($event.target.value)"
                class="form-control mr-sm-2 "
                style="width: 200px;"
@@ -24,8 +35,7 @@
           <div class="badge"> <span>{{member?.name}}</span> </div>
         </div>
         <div class="mt-5">
-          <h3 class="heading">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, <br>
-            when an unknown printer took a galley of type and scrambled it to make a type specimen book</h3><br>
+          <h3 class="heading"></h3><br>
           <span class="badge badge-primary" style="color: black; cursor: pointer;">{{member?.linkedInUrl}}</span>
           <div class="mt-5">
             <div class="progress">
