@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
 import { catchError, map, Observable, of } from 'rxjs';
 import { HomeService } from './home.service';
+import { AnyCatcher } from 'rxjs/internal/AnyCatcher';
 
 @Component({
   selector: 'app-home',
@@ -24,10 +25,12 @@ export class HomeComponent implements OnInit, AfterViewInit {
   ];
   volunteers: object[] = [];
   apiLoaded: Observable<boolean>;
+  center: google.maps.LatLngLiteral;
   options: google.maps.MapOptions = {
-    center: { lat: 41.9991487, lng: 21.3898709 },
     zoom: 15,
+    disableDefaultUI: true,
   };
+  markers: any = [];
 
   ngAfterViewInit(): void {
     const mapProperties = {
