@@ -31,15 +31,20 @@ export class HomeComponent implements OnInit, AfterViewInit {
       center: new google.maps.LatLng(this.lat, this.lng),
       zoom: 13.25,
       mapTypeId: google.maps.MapTypeId.ROADMAP,
+      tooltipSettings: {
+        visible: true,
+        valuePath:'city'
+      }
     };
     this.map = new google.maps.Map(
       this.mapElement.nativeElement,
-      mapProperties
+      mapProperties,
     );
     this.markers.forEach((location) => {
       var marker = new google.maps.Marker({
         position: new google.maps.LatLng(location.lat, location.lng),
         map: this.map,
+
       });
     });
   }

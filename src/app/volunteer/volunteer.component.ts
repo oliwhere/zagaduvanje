@@ -24,6 +24,9 @@ export class VolunteerComponent implements OnInit {
 
   ngOnInit(): void {
     this.setValidationForm();
+    if (this.activeVolunteers && this.activeVolunteers.length > 0) {
+      this.volunteers = this.activeVolunteers;
+    }
   }
 
   get f() {
@@ -75,7 +78,7 @@ export class VolunteerComponent implements OnInit {
 
     this.volunteers.push(this.volunteerValidationForm.value)
     localStorage.setItem('volunteers', JSON.stringify(this.volunteers));
-    this.toastr.success('Successful Application: Our new volunteer  ' + this.volunteerValidationForm.get('name')?.value + this.volunteerValidationForm.get('surname')?.value);
+    this.toastr.success('Our new volunteer  ' + this.volunteerValidationForm.get('name')?.value + " " + this.volunteerValidationForm.get('surname')?.value);
     this.resetForm();
   }
 
