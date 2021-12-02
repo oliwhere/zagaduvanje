@@ -20,6 +20,8 @@ export class AboutComponent implements OnInit {
         img: '../assets/images/sliki/nikola.jpg',
         info: 'Premium member',
         donations: 12,
+        label:'Create & designin About page',
+        
         linkedInUrl: 'https://www.linkedin.com/in/nikola-ivanchov-243479161/'
       },
       {
@@ -27,6 +29,7 @@ export class AboutComponent implements OnInit {
         img: '../assets/images/sliki/denica.jpg',
         info: 'Premium member',
         donations: 32,
+        label:'Create & designin Forms',
         linkedInUrl: 'http://linkiedin/denica'
       },
       {
@@ -34,6 +37,7 @@ export class AboutComponent implements OnInit {
         img: '../assets/images/sliki/oli.jpg',
         info: 'Basic member',
         donations: 10,
+        label:'Create & designin Home page and implement map',
         linkedInUrl: 'https://www.linkedin.com/in/oliver-andonovic-5363a0213/'
       },
       {
