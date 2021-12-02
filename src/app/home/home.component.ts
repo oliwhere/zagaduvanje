@@ -30,7 +30,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
     zoom: 15,
     disableDefaultUI: true,
   };
-  markers: any = [];
 
   ngAfterViewInit(): void {
     const mapProperties = {
