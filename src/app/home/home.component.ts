@@ -56,7 +56,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   get volonteri() {
-    return JSON.parse(<string>localStorage.getItem('donations'));
+    return JSON.parse(<string>localStorage.getItem('volunteers'));
   }
 
   ngOnInit(): void {
