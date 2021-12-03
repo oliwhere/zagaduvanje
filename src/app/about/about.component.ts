@@ -19,24 +19,30 @@ export class AboutComponent implements OnInit {
         img: '../assets/images/sliki/oli.jpg',
         info: 'Premium member',
         donations: 12,
-        label: 'Create & designin Home page and implement map',
+        label: 'Create & designin Home page and implemented the map',
         linkedInUrl: 'https://www.linkedin.com/in/oliver-andonovic-5363a0213/',
+        description:
+          'Oliver informs the reader about what they can expect to learn from him and the value he creates for his audience. He builds trust in several great ways, using photos, information about his professional and personal life, achievements and subscriber numbers.',
       },
       {
         name: 'Denica',
         img: '../assets/images/sliki/denica.jpg',
         info: 'Premium member',
         donations: 32,
-        label: 'Create & designin Forms',
+        label: 'Create & designedForms',
         linkedInUrl: 'http://linkiedin/denica',
+        description:
+          "Denica's hunger for knowledge and determination to turn information into action has contributed to her most recent success. Her hunger for knowledge and determination to turn information into action has contributed to her most recent success",
       },
       {
         name: 'Nikola',
         img: '../assets/images/sliki/nikola.jpg',
         info: 'Basic member',
         donations: 10,
-        label: 'Create & designin About page',
+        label: 'Create & designed About page',
         linkedInUrl: 'https://www.linkedin.com/in/nikola-ivanchov-243479161/',
+        description:
+          'Nikola is a fearless seeker of knowledge, and will stop at nothing to reach his goals and help others!',
       },
       {
         name: 'Simona',
@@ -44,6 +50,8 @@ export class AboutComponent implements OnInit {
         info: 'Basic member',
         donations: 1,
         linkedInUrl: 'http://linkiedin/simona',
+        description:
+          'Striving to become great at her job! She wants the bigger things in life, finds passion in creating visual stuff! Her greatest enemy? Not enough time.',
       },
     ];
     this.filteredTeamMembers = this.teamMembers;

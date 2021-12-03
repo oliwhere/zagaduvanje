@@ -2,13 +2,12 @@
   <div class="container h-100">
     <div class="row h-100 align-items-center">
       <div class="col-4 text-left">
-        <h2 class="">PREVENT EVEN MORE DESTRUCTION</h2>
-        <h2 class="">Take action into your own hands!</h2>
-        <h3 class="">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime
-          tempora pariatur repudiandae reiciendis iure odit quam veniam
-          cupiditate a quod nam obcaecati cumque, dolores tenetur libero velit
-          nulla saepe nemo.
+        <h2>PREVENT EVEN MORE DESTRUCTION</h2>
+        <h2>Take action into your own hands!</h2>
+        <h3>
+          We are a non profit organisation that promotes and activly engages in
+          acitvities concerning the environment. Come and join us so we can all
+          help eachother by helping our surroundings!
         </h3>
       </div>
     </div>
@@ -16,12 +15,23 @@
 </div>
 <h1 class="col-xl-12">Volunteers activly participating:</h1>
 <div class="col-xl-12 d-flex justify-content-around">
-  <div *ngFor="let volunteer of volunteers" class="card col-xl-3" >
+  <div *ngFor="let volunteer of volunteers" class="card col-xl-3">
     <div class="card-body">
-      <h5 class="card-title"><img  src="../../assets/images/volunteer-logo.png" alt="annual premium"></h5>
-      <h4 class="card-subtitle mb-2 font-weight-bold">Name: <b>{{ volunteer.name }} {{ volunteer.surname }}</b></h4>
-      <p class="card-text">Region: <b>{{ volunteer?.location }}</b></p>
-      <p class="card-text">Event: <b>{{ volunteer?.mission }}</b></p>
+      <h5 class="card-title">
+        <img
+          src="../../assets/images/volunteer-logo.png"
+          alt="annual premium"
+        />
+      </h5>
+      <h4 class="card-subtitle mb-2 font-weight-bold">
+        Name: <b>{{ volunteer.name }} {{ volunteer.surname }}</b>
+      </h4>
+      <p class="card-text">
+        Region: <b>{{ volunteer?.location }}</b>
+      </p>
+      <p class="card-text">
+        Event: <b>{{ volunteer?.mission }}</b>
+      </p>
       <p class="card-text">Status: <b>Active</b></p>
     </div>
   </div>
@@ -50,30 +60,39 @@
     </div>
   </div>
 </div>-->
-<div *ngIf="apiLoaded" class="mt-5 col-xl-12  d-flex justify-content-around">
+<div *ngIf="apiLoaded" class="mt-5 col-xl-12 d-flex justify-content-around">
   <div class="col-xl-2">
     <div class="row">
       <div class="col-3 md-12">
         <div class="card">
           <div class="card-body">
-            <h3 class="card-title mt-0" style="font-size: 24px">Upcoming events</h3>
-            <div class="sidebar-box white" style="opacity: 1;">
+            <h3 class="card-title mt-0" style="font-size: 24px">
+              Upcoming events
+            </h3>
+            <div class="sidebar-box white" style="opacity: 1">
               <ul class="upcoming-events">
-
                 <!-- Event -->
                 <li>
                   <div class="date">
-										<span>
-											<span class="day">25</span>
-											<span class="month">DEC</span>
-										</span>
+                    <span>
+                      <span class="day">25</span>
+                      <span class="month">DEC</span>
+                    </span>
                   </div>
 
                   <div class="event-content">
-                    <h6><a href="event-post-v2.html" style="color: #7b1fa2;">Sed in lacus ut enim</a></h6>
+                    <h6>
+                      <a href="event-post-v2.html" style="color: #7b1fa2"
+                        >Clean up of dead leaves from the walkways</a
+                      >
+                    </h6>
                     <ul class="event-meta">
-                      <li><i class="icons icon-clock"></i> 4:00 pm - 6:00 pm</li>
-                      <li><i class="icons icon-location"></i> 340 W 50th St.New York</li>
+                      <li>
+                        <i class="icons icon-clock"></i> 08:00 - 11:00
+                      </li>
+                      <li>
+                        <i class="icons icon-location"></i> Blvd. 8 Septemvri
+                      </li>
                     </ul>
                   </div>
                 </li>
@@ -82,17 +101,25 @@
                 <!-- Event -->
                 <li>
                   <div class="date">
-										<span>
-											<span class="day">5</span>
-											<span class="month">JAN</span>
-										</span>
+                    <span>
+                      <span class="day">5</span>
+                      <span class="month">JAN</span>
+                    </span>
                   </div>
 
                   <div class="event-content">
-                    <h6><a href="event-post-v2.html" style="color: #7b1fa2;">Sed in lacus ut enim</a></h6>
+                    <h6>
+                      <a href="event-post-v2.html" style="color: #7b1fa2"
+                        >Forrestation efforts on Mt. Vodno</a
+                      >
+                    </h6>
                     <ul class="event-meta">
-                      <li><i class="icons icon-clock"></i> 4:00 pm - 6:00 pm</li>
-                      <li><i class="icons icon-location"></i> 340 W 50th St.New York</li>
+                      <li>
+                        <i class="icons icon-clock"></i> 08:00 - 14:00
+                      </li>
+                      <li>
+                        <i class="icons icon-location"></i> Sredno Vodno
+                      </li>
                     </ul>
                   </div>
                 </li>
@@ -101,26 +128,38 @@
                 <!-- Event -->
                 <li>
                   <div class="date">
-										<span>
-											<span class="day">8</span>
-											<span class="month">JAN</span>
-										</span>
+                    <span>
+                      <span class="day">8</span>
+                      <span class="month">JAN</span>
+                    </span>
                   </div>
 
                   <div class="event-content">
-                    <h6><a href="event-post-v2.html" style="color: #7b1fa2;">Sed in lacus ut enim</a></h6>
+                    <h6>
+                      <a href="event-post-v2.html" style="color: #7b1fa2"
+                        >Collecting excess waste material near the landfill in Novo Lisiche</a
+                      >
+                    </h6>
                     <ul class="event-meta">
-                      <li><i class="icons icon-clock"></i> 4:00 pm - 6:00 pm</li>
-                      <li><i class="icons icon-location"></i> 340 W 50th St.New York</li>
+                      <li>
+                        <i class="icons icon-clock"></i> 12:00 - 15:00
+                      </li>
+                      <li>
+                        <i class="icons icon-location"></i> Blvd. Vidoe Smilevski Bato
+                      </li>
                     </ul>
                   </div>
                 </li>
                 <!-- /Event -->
-
               </ul>
-              <a href="#" class="button transparent button-arrow" style="color: #7b1fa2;">More events</a>
+              <a
+                href="#"
+                class="button transparent button-arrow"
+                style="color: #7b1fa2"
+                >More events</a
+              >
             </div>
-           <!-- <div>
+            <!-- <div>
               <ul>
                 <li>
                   <div class="date">
@@ -186,13 +225,11 @@
     </div>
   </div>
   <div class="col-xl-9 map">
-
     <div class="col-xl-12 mt-0">
-      <h3 class="col-xl-12 float-left mt-0"> Ongoing Events:</h3>
+      <h3 class="col-xl-12 float-left mt-0">Ongoing Events:</h3>
     </div>
     <div class="col-xl-12">
       <div #map style="width: 100%; height: 450px"></div>
     </div>
-
   </div>
 </div>
