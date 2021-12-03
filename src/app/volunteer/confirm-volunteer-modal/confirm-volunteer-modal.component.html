@@ -5,8 +5,8 @@
   <button type="button" class="close" aria-hidden="true" (click)="closeModal()">×</button>
 </div>
 <div class="modal-body">
-  <p>You are about to apply to be a volunteer</p>
-  <p>Thank you <b>{{volunteerService.uppercaseFirstLetter(volunteers?.name)}} {{volunteerService.uppercaseFirstLetter(volunteers?.surname)}}</b></p>
+  <p>You are volunteering for <b>{{volunteerService.uppercaseFirstLetter(volunteering?.mission)}}</b> in <b>{{volunteerService.uppercaseFirstLetter(volunteering?.location)}}</b></p>
+  <p>Thank you <b>{{volunteerService.uppercaseFirstLetter(volunteering?.name)}} {{volunteerService.uppercaseFirstLetter(volunteering?.surname)}}</b></p>
 </div>
 <div class="modal-footer">
   <button type="button" class="btn btn-primary" (click)="confirm(); closeModal();">Confirm</button>

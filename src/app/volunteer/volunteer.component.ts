@@ -47,7 +47,8 @@ export class VolunteerComponent implements OnInit {
         ],
       ],
       adress: ['', [Validators.required]],
-      location:['',]
+      mission: ['', [Validators.required]],
+      location:['', [Validators.required]]
     });
   }
   public get activeVolunteers(): any[] {

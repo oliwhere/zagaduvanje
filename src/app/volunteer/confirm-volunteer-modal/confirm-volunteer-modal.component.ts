@@ -8,7 +8,7 @@ import {VolunteerService} from "../volunteer.service";
   styleUrls: ['./confirm-volunteer-modal.component.scss'],
 })
 export class ConfirmVolunteerModalComponent implements OnInit {
-  @Input() volunteers: any;
+  @Input() volunteering: any;
   @Output() emitConfirm = new EventEmitter<any>();
   constructor(private modalService: NgbModal,
               public volunteerService: VolunteerService) {

@@ -14,18 +14,130 @@
     </div>
   </div>
 </div>
+<h1 class="col-xl-12">Volunteers activly participating:</h1>
+<div class="col-xl-12 d-flex justify-content-around">
+  <div *ngFor="let volunteer of volunteers" class="card col-xl-3" >
+    <div class="card-body">
+      <h5 class="card-title"><img  src="../../assets/images/volunteer-logo.png" alt="annual premium"></h5>
+      <h4 class="card-subtitle mb-2 font-weight-bold">Name: <b>{{ volunteer.name }} {{ volunteer.surname }}</b></h4>
+      <p class="card-text">Region: <b>{{ volunteer?.location }}</b></p>
+      <p class="card-text">Event: <b>{{ volunteer?.mission }}</b></p>
+      <p class="card-text">Status: <b>Active</b></p>
+    </div>
+  </div>
+</div>
+<!--<div class="col-xl-12">
 
-<div #map style="width: 100%; height: 450px"></div>
-
-<div *ngIf="apiLoaded" class="container mt-5 col-xl-12">
-  <div class="container col-xl-3">
+  <div class="col-xl-12 d-flex justify-content-around">
+    <div
+      class="card m-4"
+      style="width: 18rem"
+      *ngFor="let volunteer of volunteers"
+    >
+      <div class="card-body">
+        <h5 class="card-title">
+          <img src="../../assets/images/volunteer-logo.png" alt="volunteer" />
+        </h5>
+        <h4 class="card-subtitle mb-2 font-weight-bold">
+          Name: <strong>{{ volunteer.name }} {{ volunteer.surname }}</strong>
+        </h4>
+        <ul>
+          <li>Region: Aerodrom</li>
+          <li>Works on: leaf disposal</li>
+          <li>Status: Active</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>-->
+<div *ngIf="apiLoaded" class="mt-5 col-xl-12  d-flex justify-content-around">
+  <div class="col-xl-2">
     <div class="row">
       <div class="col-3 md-12">
         <div class="card">
           <div class="card-body">
-            <h4 class="card-title"><strong>UPCOMMING EVENTS</strong></h4>
-            <div>
+            <h3 class="card-title mt-0" style="font-size: 24px">Upcoming events</h3>
+            <div class="sidebar-box white" style="opacity: 1;">
+              <ul class="upcoming-events">
+
+                <!-- Event -->
+                <li>
+                  <div class="date">
+										<span>
+											<span class="day">25</span>
+											<span class="month">DEC</span>
+										</span>
+                  </div>
+
+                  <div class="event-content">
+                    <h6><a href="event-post-v2.html" style="color: #7b1fa2;">Sed in lacus ut enim</a></h6>
+                    <ul class="event-meta">
+                      <li><i class="icons icon-clock"></i> 4:00 pm - 6:00 pm</li>
+                      <li><i class="icons icon-location"></i> 340 W 50th St.New York</li>
+                    </ul>
+                  </div>
+                </li>
+                <!-- /Event -->
+
+                <!-- Event -->
+                <li>
+                  <div class="date">
+										<span>
+											<span class="day">5</span>
+											<span class="month">JAN</span>
+										</span>
+                  </div>
+
+                  <div class="event-content">
+                    <h6><a href="event-post-v2.html" style="color: #7b1fa2;">Sed in lacus ut enim</a></h6>
+                    <ul class="event-meta">
+                      <li><i class="icons icon-clock"></i> 4:00 pm - 6:00 pm</li>
+                      <li><i class="icons icon-location"></i> 340 W 50th St.New York</li>
+                    </ul>
+                  </div>
+                </li>
+                <!-- /Event -->
+
+                <!-- Event -->
+                <li>
+                  <div class="date">
+										<span>
+											<span class="day">8</span>
+											<span class="month">JAN</span>
+										</span>
+                  </div>
+
+                  <div class="event-content">
+                    <h6><a href="event-post-v2.html" style="color: #7b1fa2;">Sed in lacus ut enim</a></h6>
+                    <ul class="event-meta">
+                      <li><i class="icons icon-clock"></i> 4:00 pm - 6:00 pm</li>
+                      <li><i class="icons icon-location"></i> 340 W 50th St.New York</li>
+                    </ul>
+                  </div>
+                </li>
+                <!-- /Event -->
+
+              </ul>
+              <a href="#" class="button transparent button-arrow" style="color: #7b1fa2;">More events</a>
+            </div>
+           <!-- <div>
               <ul>
+                <li>
+                  <div class="date">
+										<span>
+											<span class="day">25</span>
+											<span class="month">DEC</span>
+										</span>
+                  </div>
+
+                  <div class="event-content">
+                    <h6><a href="event-post-v2.html">Sed in lacus ut enim</a></h6>
+                    <ul class="event-meta">
+                      <li><i class="icons icon-clock"></i> 4:00 pm - 6:00 pm</li>
+                      <li><i class="icons icon-location"></i> 340 W 50th St.New York</li>
+                    </ul>
+                  </div>
+                </li>
                 <li>
                   <div class="icon">
                     <img
@@ -67,34 +179,20 @@
                   <p>Massive event for the promotion of the day of the tree</p>
                 </li>
               </ul>
-            </div>
+            </div>-->
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="col-xl-9">
-    <h1 class="col-xl-12">Volunteers activly participating:</h1>
-    <div class="col-xl-12 d-flex justify-content-around">
-      <div
-        class="card m-4"
-        style="width: 18rem"
-        *ngFor="let volunteer of volunteers"
-      >
-        <div class="card-body">
-          <h5 class="card-title">
-            <img src="../../assets/images/volunteer-logo.png" alt="volunteer" />
-          </h5>
-          <h4 class="card-subtitle mb-2 font-weight-bold">
-            Name: <strong>{{ volunteer.name }} {{ volunteer.surname }}</strong>
-          </h4>
-          <ul>
-            <li>Region: Aerodrom</li>
-            <li>Works on: leaf disposal</li>
-            <li>Status: Active</li>
-          </ul>
-        </div>
-      </div>
+  <div class="col-xl-9 map">
+
+    <div class="col-xl-12 mt-0">
+      <h3 class="col-xl-12 float-left mt-0"> Ongoing Events:</h3>
     </div>
+    <div class="col-xl-12">
+      <div #map style="width: 100%; height: 450px"></div>
+    </div>
+
   </div>
 </div>

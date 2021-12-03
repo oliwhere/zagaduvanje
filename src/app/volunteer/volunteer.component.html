@@ -71,13 +71,19 @@
   </div>
   <div class="form-group md-0">
     <label for="inputState" class="col-form-label form-group-title font-color font-size-15">Location</label>
-    <select id="inputState" class="form-control mb-2">
+    <select formControlName="location" id="inputState" class="form-control mb-2">
       <option class="form-control mb-2" selected>Choose...</option>
-      <option class="form-control mb-2" value="1">Aerodrom</option>
-      <option  class="form-control mb-2" value="2">Karposh 1</option>
-      <option class="form-control mb-2" value="3">Karposh 2</option>
+      <option class="form-control mb-2" value="Aerodrom">Aerodrom</option>
+      <option  class="form-control mb-2" value="Karposh 1">Karposh 1</option>
+      <option class="form-control mb-2" value="Karposh 2">Karposh 2</option>
     </select>
   </div>
+   <div class="form-group md-0">
+     <label for="inputState" class="col-form-label form-group-title font-color font-size-15">Event</label>
+    <textarea  rows="4" formControlName="mission" class="col-xl-12"></textarea>
+   </div>
+
+
   <div class="mt-4">
     <button class="btn btn-block log-in-btn"
             [disabled]="volunteerValidationForm.invalid"
