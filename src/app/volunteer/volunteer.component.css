@@ -38,7 +38,6 @@ input {
   font-size: 1rem;
   color: #28384f;
   transition: all .3s ease-in-out;
-  text-transform: lowercase;
 }
 
 label {

@@ -37,17 +37,18 @@ export class VolunteerComponent implements OnInit {
     this.volunteerValidationForm = this.formBuilder.group({
       name: ['', [Validators.required]],
       surname: ['', [Validators.required]],
-      email: ['', [Validators.required, Validators.email]],
+      email: ['', [Validators.required, ValidationService.emailValidator]],
       phone: [
         '',
         [
           Validators.required,
           Validators.maxLength(9),
+          ValidationService.wholeNumberValidator
           // ValidationService.positiveNumberValidator,
         ],
       ],
       adress: ['', [Validators.required]],
-      mission: ['', [Validators.required]],
+      mission: ['', [Validators.required, Validators.maxLength(100),]],
       location:['', [Validators.required]]
     });
   }

@@ -13,7 +13,6 @@
     </label>
     <input formControlName="name"
            type="text"
-           style="text-transform:lowercase"
            placeholder="Enter name"
            class="form-control mb-2">
   </div>
@@ -23,7 +22,6 @@
     </label>
     <input formControlName="surname"
            type="text"
-           style="text-transform:lowercase"
            placeholder="Enter surname"
            class="form-control mb-2">
      <app-control-messages
@@ -36,7 +34,6 @@
     </label>
     <input formControlName="adress"
            type="string"
-           style="text-transform:lowercase"
            placeholder="Enter adress"
            class="form-control mb-2">
     <app-control-messages
@@ -62,7 +59,6 @@
     </label>
     <input formControlName="phone"
            type="string"
-           style="text-transform:lowercase"
            placeholder="Enter phone number"
            class="form-control mb-2">
     <app-control-messages
@@ -72,15 +68,18 @@
   <div class="form-group md-0">
     <label for="inputState" class="col-form-label form-group-title font-color font-size-15">Location</label>
     <select formControlName="location" id="inputState" class="form-control mb-2">
-      <option class="form-control mb-2" selected>Choose...</option>
-      <option class="form-control mb-2" value="Aerodrom">Aerodrom</option>
+      <option class="form-control mb-2" value="Novo Lisice" >Novo Lisice</option>
+      <option class="form-control mb-2" value="Aerodrom" selected>Aerodrom</option>
       <option  class="form-control mb-2" value="Karposh 1">Karposh 1</option>
       <option class="form-control mb-2" value="Karposh 2">Karposh 2</option>
     </select>
   </div>
    <div class="form-group md-0">
      <label for="inputState" class="col-form-label form-group-title font-color font-size-15">Event</label>
-    <textarea  rows="4" formControlName="mission" class="col-xl-12"></textarea>
+    <textarea  placeholder="Tell more about the event" rows="4" formControlName="mission" class="col-xl-12"></textarea>
+     <app-control-messages
+       [control]="volunteerValidationForm?.get('mission')">
+     </app-control-messages>
    </div>
 
 
@@ -89,12 +88,12 @@
             [disabled]="volunteerValidationForm.invalid"
             type="submit" id="submit">Submit
     </button>
-    <button
+   <!-- <button
       class="btn btn-block log-in-btn"
       (click)="resetForm()"
       type="button">
       Cancel
-    </button>
+    </button>-->
   </div>
 </form>
     </div>
