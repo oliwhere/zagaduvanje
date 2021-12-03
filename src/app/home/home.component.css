@@ -224,4 +224,7 @@ h3 {
 
 
 
-
+.text-box {
+  background: rgb(59, 59, 59); /* Fallback for older browsers without RGBA-support */
+  background: rgba(30, 30, 30, 0.5);
+}
