@@ -51,7 +51,7 @@ h3 {
 }
 
 .image-background {
-  height: 50vh;
+  height: 55vh;
   min-height: 500px;
   background-image: url("../../assets/images/3-car.jpg");
   background-size: cover;
